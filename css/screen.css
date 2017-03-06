@@ -1,0 +1,118 @@
+
+	body {
+		font:100% 'Arvo',serif;
+		background: #333;
+	}
+	h1 {
+		font-size: 2em;
+		padding: 0;
+		color: #fff;
+		margin: 1em 0;
+		font-weight:700;
+	}
+	body>h1:before{
+		content:url(../1409497495_html5.svg);
+		vertical-align:-28px;
+
+	}
+	section>h1, aside>h1 {
+		font-size: 1.6em;
+		background: #16a085;
+		color: #fff;
+		padding: 0.5em;
+		margin: 0;
+		font-weight:lighter;
+	}
+	section>h2 {
+		font-size: 1.2em;
+		font-weight:lighter;
+	}
+	nav ul, nav li {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+	}
+	nav li {
+		font-size: 1rem;
+		display: inline-block;
+		width: 20%;
+		text-align: center;
+	}
+	nav a {
+		display: block;
+		text-decoration: none;
+		line-height: 2.5em;
+		padding: 0 2rem;
+	}
+	p {
+		text-align: justify;
+		font-family:sans-serif;
+	}
+	section {
+		background: #fff;
+	}
+	a {
+		color: #369;
+	}
+	nav a {
+		color:#fff;
+		background: #555;
+		transition: all 0.5s linear;
+		text-transform:capitalize;
+	}
+	nav a:hover {
+		background: #f90;
+	
+	}
+	nav a.active{
+		background: #f90;
+	}
+
+	/* ID'S */
+
+	#main {
+		background: #eee;
+	}
+
+	/* Image */
+
+	img.large {
+		margin: 0.5em 0;
+		width: 100%;
+		height: auto;
+	}
+
+
+	/* Clearfix */
+
+	.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+	.clearfix:after { clear: both; }  
+	.clearfix { zoom: 1; } 
+
+	/* Disposition par défaut */
+
+	section, aside {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0.5em;
+		min-height: 300px;
+	}
+	nav {
+		width: 100%;
+	}
+
+	/* Grandes résolutions portable tablette*/
+
+	@media screen and (min-width: 1024px) {
+		section {
+			float: left;
+			width: 70%;
+		}
+		aside {
+			float: left;
+			width: 30%;
+		}
+	}
+
+	/* Petites résolutions mobile */
