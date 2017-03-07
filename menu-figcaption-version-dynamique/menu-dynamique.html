@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test menu</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<style scoped>
+		body{
+			font:16px 'Open Sans',sans-serif;
+			font-size-adjust:0.5;
+			margin:0;
+		}
+		a{
+			text-decoration: none;
+			color:#222;
+		}
+		*{
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		li>a{
+			display: block;
+			font-size: 1.2rem;
+			text-transform: capitalize;
+			-webkit-transition-duration: 0.2s;
+			-moz-transition-duration: 0.2s;
+			-ms-transition-duration: 0.2s;
+			-o-transition-duration: 0.2s;
+			transition-duration: 0.2s;
+		}
+		ul{
+			position:fixed;
+			z-index: 1;
+			width: 100%;
+			left:0;
+			top:0;
+			margin:0;
+			line-height: 60px;
+			overflow: hidden;
+			background: #fafafa;
+			padding: 0;
+		}
+		li{
+			float: left;
+			width: 180px;
+			text-align: center;
+			list-style-type: none;
+			border-bottom:solid 3px transparent;
+
+
+		}
+		li:hover{
+			border-bottom:solid 3px  #2196f3;
+			
+		}
+		li>a:hover{
+			color:#ccc;
+		}
+		.card{
+			width: 400px;
+			margin:150px auto 0;
+			border:solid 1px #ccc;
+			box-shadow: 0 0 4px rgba(0,0,0,0.3);
+			display: none;  
+		}
+		.card>figure{
+			margin:0;
+			width: auto;
+		}
+		figure>img{
+			display: block;
+		}
+		figcaption{
+			position:relative;
+		}
+		figcaption>h2,figcaption>p{
+			margin:0;
+		}
+		figcaption>h2{
+			font-weight: 400;
+			line-height: 55px;
+			text-align: center;
+		}
+		figcaption>p{
+			padding:4px;
+			line-height: 22px;
+		}
+		figcaption>p>a{
+			display: inline-block;
+			color: #FFB557;
+			margin-right:10px;
+			text-transform: uppercase;
+			font-size: 1.4rem;
+			line-height: 55px;
+
+
+		}
+		
+figcaption>button{
+	position: absolute;
+	bottom:5px;
+	right: 0;
+	border:0;
+	background: transparent;
+	color:#ccc;
+	
+	font-size: 1rem;
+}
+button{
+	cursor:pointer;
+	outline:none;
+}
+
+	</style>
+	<ul>
+		<li><a href="#">home</a></li>
+		<li><a href="#" id="loading-file-a">pages</a></li>
+		<li><a href="#" id="loading-file-b">photos</a></li>
+		<li><a href="#">contact</a></li>
+	</ul>
+	<div id="info" class="card">Chargement en cours...</div>
+	
+	<script type="text/javascript">
+		$(function(){
+			//appel du fichier par la méthode load
+			$('#loading-file-a').on('click', function(){//event
+          		$('#info').load('card-a.html').fadeIn('.card');//fichier à charger
+        		});
+			//2ème appel
+			$('#loading-file-b').on('click', function(){//event
+          		$('#info').load('card-b.html').fadeIn('.card');//fichier à charger
+        		});
+		});
+	</script>
+</body>
+</html>
